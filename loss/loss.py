@@ -1,4 +1,4 @@
-from metrics import dice_score
+from metric.metrics import dice_score
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -33,4 +33,18 @@ def calc_loss(pred, target, bce_weight=0.5):
     dice_loss = DiceLoss()
     dice =  dice_loss(pred, target)
     loss = bce * bce_weight + dice * (1 - bce_weight)
+    return loss
+def bce_tversky_loss(pred,target, bce_weight = 0.5):
+    bce = F.binary_cross_entropy_with_logits(torch.sigmoid(pred), target)
+    tv = tversky_loss(target, pred)
+
+    loss = bce * bce_weight + tv * (1 - bce_weight)
+
+    return loss
+def dice_tversky_loss(pred,target, bce_weight = 0.5):
+    dice = DiceLoss()(pred, target)
+    tv = tversky_loss(target, pred)
+
+    loss = dice * bce_weight + tv * (1 - bce_weight)
+
     return loss
