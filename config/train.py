@@ -5,7 +5,7 @@ import os
 from module.model.proposed_net import DermoMamba
 model = DermoMamba()
 os.makedirs('./weight/ISIC2018/', exist_ok = True)
-check_point = pl.callbacks.model_checkpoint.ModelCheckpoint('./weight/ISIC2018/Loss/', filename="ckpt{val_dice:0.4f}",
+check_point = pl.callbacks.model_checkpoint.ModelCheckpoint('./weight/ISIC2018/', filename="ckpt{val_dice:0.4f}",
                                                             monitor="val_dice", mode = "max", save_top_k =1,
                                                             verbose=True, save_weights_only=True,
                                                             auto_insert_metric_name=False)
