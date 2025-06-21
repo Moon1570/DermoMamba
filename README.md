@@ -9,7 +9,7 @@ In recent years, the application of artificial intelligence in medical image seg
 - Introduce **Guide Fusion Loss** to improve edge-level segmentation via attention-guided supervision.
 - Lightweight architecture with **<5M parameters** and **<1 GFLOPS**, suitable for deployment on low-resource devices.
 ## Overview of the DermoMamba network architecture
-![Model Architecture](./architecture.png)
+![Model Architecture](./assets/modelv2.png)
 
 ## Results Summary
 - Achieves superior performance compared to state-of-the-art CNN, Transformer, and Mamba-based models on **ISIC 2018** and **PH2** datasets.  
