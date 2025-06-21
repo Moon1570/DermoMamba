@@ -12,6 +12,13 @@ In recent years, the application of artificial intelligence in medical image seg
 ## Overview of the DermoMamba network architecture
 ![Model Architecture](./assets/modelv2.png)
 
+## Datasets
+
+We evaluate DermoMamba on two widely-used dermoscopic skin lesion segmentation datasets:
+
+- **ISIC 2018**: [https://challenge.isic-archive.com/](https://challenge.isic-archive.com/)
+- **PH2**: [https://www.fc.up.pt/addi/ph2%20database.html](https://www.fc.up.pt/addi/ph2%20database.html)
+
 ## Results Summary
 - Achieves superior performance compared to state-of-the-art CNN, Transformer, and Mamba-based models on **ISIC 2018** and **PH2** datasets.  
 - Maintains high segmentation accuracy with significantly reduced computational cost.
