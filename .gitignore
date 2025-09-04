@@ -1,0 +1,6 @@
+data
+# ignore __pycache__ directories
+__pycache__/
+# ignore __pycache__ in all subdirectories
+**/__pycache__/
+tb_logs/
