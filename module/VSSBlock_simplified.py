@@ -28,7 +28,7 @@ class VSSBlock(nn.Module):
         self.drop_path = DropPath(drop_path)
 
     def forward(self, input: torch.Tensor):
-        # input: (B, H, W, C) - expected format from CSMB
+        # input: (B, H, W, C) -> (B, H*W, C)
         B, H, W, C = input.shape
         input_flat = input.view(B, H * W, C)
         
