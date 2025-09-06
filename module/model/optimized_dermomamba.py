@@ -18,9 +18,10 @@ class OptimizedDermoMamba(nn.Module):
     3. Fused operations where possible
     4. Better memory management
     """
-    def __init__(self, use_gradient_checkpointing=True):
+    def __init__(self, n_class=1, use_gradient_checkpointing=True):
         super().__init__()
         
+        self.n_class = n_class
         self.use_gradient_checkpointing = use_gradient_checkpointing
         
         # Input projection
@@ -54,7 +55,7 @@ class OptimizedDermoMamba(nn.Module):
         self.d1 = DecoderBlock(32, 16)
         
         # Final output
-        self.conv_out = nn.Conv2d(16, 1, kernel_size=1)
+        self.conv_out = nn.Conv2d(16, n_class, kernel_size=1)
         
         # Initialize weights
         self._initialize_weights()
