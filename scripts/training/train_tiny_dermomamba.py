@@ -15,7 +15,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Add the project root to Python path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, project_root)
+sys.path.append('.')
+sys.path.append('../..')
 
 # GPU Detection and setup
 def setup_gpu():
@@ -79,13 +82,13 @@ def main():
     print(f"✅ Validation samples: {len(val_dataset)}")
     
     # Create data loaders with smaller batch size for memory efficiency
-    batch_size = 2 if device.type == 'cuda' else 1  # Very small batch size
+    batch_size = 8 if device.type == 'cuda' else 1  # Very small batch size
     
     train_loader = DataLoader(
         train_dataset,
         batch_size=batch_size,
         shuffle=True,
-        num_workers=2,  # Reduced workers
+        num_workers=4,  # Reduced workers
         pin_memory=True if device.type == 'cuda' else False,
         drop_last=True
     )
@@ -94,7 +97,7 @@ def main():
         val_dataset,
         batch_size=batch_size,
         shuffle=False,
-        num_workers=2,
+        num_workers=4,
         pin_memory=True if device.type == 'cuda' else False,
         drop_last=False
     )
@@ -152,7 +155,7 @@ def main():
     print("="*60)
     
     # Training loop
-    num_epochs = 50
+    num_epochs = 100
     best_dice = 0.0
     
     for epoch in range(num_epochs):

@@ -4,3 +4,9 @@ __pycache__/
 # ignore __pycache__ in all subdirectories
 **/__pycache__/
 tb_logs/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.log
+checkpoints/tiny/best_model.pth
