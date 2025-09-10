@@ -1,0 +1,24 @@
+{
+  "enhancement_type": "complete_comprehensive_spatial_aware",
+  "all_edge_methods": [
+    "unsharp_masking",
+    "clahe_contrast_enhancement",
+    "sobel_edge_detection",
+    "laplacian_enhancement",
+    "multiscale_edge_features"
+  ],
+  "spatial_features": [
+    "x_coordinates",
+    "y_coordinates",
+    "radial_distance_from_center"
+  ],
+  "model": "SpatialAwareDermoMamba_6_channels",
+  "input_channels": 6,
+  "loss_type": "adaptive_guide_fusion_with_spatial_awareness",
+  "batch_size": 4,
+  "learning_rate": 0.0001,
+  "epochs": 100,
+  "device": "cuda",
+  "target_dice": 0.91,
+  "paper_implementation": "complete_with_spatial_data"
+}
