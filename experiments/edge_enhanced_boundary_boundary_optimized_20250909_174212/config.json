@@ -1,0 +1,10 @@
+{
+  "edge_enhancement": "boundary_optimized",
+  "loss_type": "adaptive_guide_fusion",
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "epochs": 100,
+  "device": "cuda",
+  "model": "OptimizedDermoMamba",
+  "edge_enhanced_preprocessing": true
+}

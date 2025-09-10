@@ -1,0 +1,17 @@
+{
+  "edge_enhancement": "comprehensive_all_methods",
+  "loss_type": "adaptive_guide_fusion",
+  "batch_size": 6,
+  "learning_rate": 0.0001,
+  "epochs": 100,
+  "device": "cuda",
+  "model": "OptimizedDermoMamba",
+  "comprehensive_edge_methods": [
+    "unsharp_masking",
+    "clahe_contrast",
+    "sobel_edges",
+    "boundary_optimization",
+    "multi_scale_features"
+  ],
+  "target_dice": 0.91
+}

@@ -160,15 +160,15 @@ class MetricsTracker:
         plt.close()
 
 def dice_score(pred, target, smooth=1e-6):
-    """Compute Dice score"""
-    pred = torch.sigmoid(pred)
+    """Compute Dice score with hard thresholding for metrics"""
+    pred = (torch.sigmoid(pred) > 0.5).float()
     intersection = (pred * target).sum()
     dice = (2.0 * intersection + smooth) / (pred.sum() + target.sum() + smooth)
     return dice
 
 def iou_score(pred, target, smooth=1e-6):
-    """Compute IoU score"""
-    pred = torch.sigmoid(pred)
+    """Compute IoU score with hard thresholding for metrics"""
+    pred = (torch.sigmoid(pred) > 0.5).float()
     intersection = (pred * target).sum()
     union = pred.sum() + target.sum() - intersection
     iou = (intersection + smooth) / (union + smooth)

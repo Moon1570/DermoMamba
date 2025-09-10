@@ -51,7 +51,6 @@ def main():
     from datasets.isic_dataset import ISICDataset
     from module.model.tiny_dermomamba import TinyDermoMamba
     from loss.loss import DiceLoss, calc_loss
-    from loss.paper_guide_fusion_loss import GuideFusionLoss, BoundaryAwareDiceLoss, create_guide_fusion_loss
     from metric.metrics import dice_score, iou_score
     
     # Dataset paths
@@ -115,30 +114,11 @@ def main():
     total_params = sum(p.numel() for p in model.parameters())
     print(f"✅ Model parameters: {total_params:,}")
     
-    # Loss and optimizer - Using Guide Fusion Loss for better boundary segmentation
-    print("🔬 Initializing Guide Fusion Loss for boundary-aware training...")
+    # Loss and optimizer
+    def combined_loss(pred, target):
+        return calc_loss(pred, target, bce_weight=0.5)
     
-    # Create Guide Fusion Loss with optimized parameters
-    guide_fusion_loss = GuideFusionLoss(
-        alpha=1.0,          # BCE weight
-        beta=2.0,           # Dice weight (increased for better segmentation)
-        gamma=0.5,          # Edge loss weight
-        boundary_weight=3.0  # Boundary attention amplification
-    )
-    
-    # Alternative: Boundary-Aware Dice Loss (simpler but effective)
-    boundary_dice_loss = BoundaryAwareDiceLoss(boundary_weight=2.0)
-    
-    # Combined loss function for even better performance
-    def enhanced_boundary_loss(pred, target):
-        """Combined Guide Fusion + Boundary Dice Loss"""
-        guide_loss = guide_fusion_loss(pred, target)
-        boundary_loss = boundary_dice_loss(pred, target)
-        return 0.7 * guide_loss + 0.3 * boundary_loss
-    
-    criterion = enhanced_boundary_loss
-    print("✅ Enhanced boundary-aware loss initialized!")
-    
+    criterion = combined_loss
     optimizer = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
     scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=50)
     
