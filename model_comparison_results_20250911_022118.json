@@ -1,0 +1,477 @@
+{
+  "timestamp": "20250911_022118",
+  "total_models": 13,
+  "analysis_config": {
+    "test_sizes": [
+      "1x224x224",
+      "1x256x256",
+      "1x384x384",
+      "4x256x256"
+    ],
+    "device": "cuda",
+    "thop_available": true
+  },
+  "results": [
+    {
+      "name": "Checkpoint: optimized_complete (best_model-v1.ckpt)",
+      "category": "optimized_complete",
+      "type": "checkpoint",
+      "path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete\\best_model-v1.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "best_score": 0.40877604484558105,
+        "monitor_metric": "val_dice",
+        "epochs_trained": 1,
+        "training_steps": 72,
+        "last_lr_epoch": 1
+      },
+      "inference_times": {
+        "1x224x224": 0.018326010704040527,
+        "1x256x256": 0.019775452613830565,
+        "1x384x384": 0.031966419219970704,
+        "4x256x256": 0.038924946784973144
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 54.56724958583155,
+        "1x256x256": 50.5677427226429,
+        "1x384x384": 31.28282818036935,
+        "4x256x256": 102.76186174631297
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Checkpoint: optimized_complete (best_model-v2.ckpt)",
+      "category": "optimized_complete",
+      "type": "checkpoint",
+      "path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete\\best_model-v2.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "best_score": 0.38383543491363525,
+        "monitor_metric": "val_dice",
+        "epochs_trained": 1,
+        "training_steps": 72,
+        "last_lr_epoch": 1
+      },
+      "inference_times": {
+        "1x224x224": 0.016790876388549803,
+        "1x256x256": 0.016830387115478514,
+        "1x384x384": 0.032170681953430175,
+        "4x256x256": 0.03846522331237793
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 59.55615280938699,
+        "1x256x256": 59.41633981076545,
+        "1x384x384": 31.084202736130553,
+        "4x256x256": 103.99003711783519
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Checkpoint: optimized_complete (best_model.ckpt)",
+      "category": "optimized_complete",
+      "type": "checkpoint",
+      "path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete\\best_model.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "best_score": 0.42129984498023987,
+        "monitor_metric": "val_dice",
+        "epochs_trained": 3,
+        "training_steps": 216,
+        "last_lr_epoch": 3
+      },
+      "inference_times": {
+        "1x224x224": 0.017333369255065918,
+        "1x256x256": 0.018208389282226563,
+        "1x384x384": 0.03254624843597412,
+        "4x256x256": 0.03897985458374023
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 57.692188130575715,
+        "1x256x256": 54.919739714490426,
+        "1x384x384": 30.72550748720633,
+        "4x256x256": 102.6171093431562
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Checkpoint: optimized_complete_improved (best_model-v1.ckpt)",
+      "category": "optimized_complete_improved",
+      "type": "checkpoint",
+      "path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete_improved\\best_model-v1.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "best_score": 0.8924606442451477,
+        "monitor_metric": "val_dice",
+        "epochs_trained": 96,
+        "training_steps": 6912,
+        "last_lr_epoch": 95
+      },
+      "inference_times": {
+        "1x224x224": 0.01624037742614746,
+        "1x256x256": 0.01714290142059326,
+        "1x384x384": 0.03227311134338379,
+        "4x256x256": 0.038705782890319826
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 61.57492364616921,
+        "1x256x256": 58.33318266642598,
+        "1x384x384": 30.98554674075473,
+        "4x256x256": 103.34373060828554
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Checkpoint: optimized_complete_improved (best_model.ckpt)",
+      "category": "optimized_complete_improved",
+      "type": "checkpoint",
+      "path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete_improved\\best_model.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "best_score": 0.7917397618293762,
+        "monitor_metric": "val_dice",
+        "epochs_trained": 2,
+        "training_steps": 574,
+        "last_lr_epoch": 1
+      },
+      "inference_times": {
+        "1x224x224": 0.01883007526397705,
+        "1x256x256": 0.02003108024597168,
+        "1x384x384": 0.032789382934570316,
+        "4x256x256": 0.039349517822265624
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 53.1065322884319,
+        "1x256x256": 49.92241994542972,
+        "1x384x384": 30.497676702103647,
+        "4x256x256": 101.65308805224115
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Checkpoint: tiny (best_model.pth)",
+      "category": "tiny",
+      "type": "checkpoint",
+      "path": "d:\\Research\\DermoMamba\\checkpoints\\tiny\\best_model.pth",
+      "total_params": 3599905,
+      "trainable_params": 3599905,
+      "model_size_mb": 13.732547760009766,
+      "flops_count": 983236608.0,
+      "flops_readable": "9",
+      "checkpoint_metrics": {
+        "epochs_trained": 91
+      },
+      "inference_times": {
+        "1x224x224": 0.003191103935241699,
+        "1x256x256": 0.0034320592880249024,
+        "1x384x384": 0.0026427173614501955,
+        "4x256x256": 0.0036100339889526367
+      },
+      "memory_usage": {
+        "1x224x224": 0.6220703125,
+        "1x256x256": 0.8125,
+        "1x384x384": 1.828125,
+        "4x256x256": 3.25
+      },
+      "throughput": {
+        "1x224x224": 313.37117821712644,
+        "1x256x256": 291.37025793499174,
+        "1x384x384": 378.39839196850335,
+        "4x256x256": 1108.0228087161313
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Experiment: complete_spatial_comprehensive... (best_model.ckpt)",
+      "category": "complete_spatial_comprehensive_enhanced_20250910_100125",
+      "type": "experiment",
+      "path": "d:\\Research\\DermoMamba\\experiments\\complete_spatial_comprehensive_enhanced_20250910_100125\\checkpoints\\best_model.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "epochs_trained": 82
+      },
+      "inference_times": {
+        "1x224x224": 0.018559956550598146,
+        "1x256x256": 0.01887336254119873,
+        "1x384x384": 0.03259162425994873,
+        "4x256x256": 0.038699221611022946
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 53.879436477871074,
+        "1x256x256": 52.98472902309255,
+        "1x384x384": 30.682729772043988,
+        "4x256x256": 103.36125207388291
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Experiment: comprehensive_edge_enhanced_ad... (best_model.ckpt)",
+      "category": "comprehensive_edge_enhanced_adaptive_guide_fusion_20250910_003734",
+      "type": "experiment",
+      "path": "d:\\Research\\DermoMamba\\experiments\\comprehensive_edge_enhanced_adaptive_guide_fusion_20250910_003734\\checkpoints\\best_model.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "epochs_trained": 52
+      },
+      "inference_times": {
+        "1x224x224": 0.016440629959106445,
+        "1x256x256": 0.01809236526489258,
+        "1x384x384": 0.0324608325958252,
+        "4x256x256": 0.03891195297241211
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 60.824919877604884,
+        "1x256x256": 55.27193295950392,
+        "1x384x384": 30.806357078117905,
+        "4x256x256": 102.79617686719374
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Experiment: dual_metric_20250911_015820... (best-combined-epoch=07-val_combined=0.9203.ckpt)",
+      "category": "dual_metric_20250911_015820",
+      "type": "experiment",
+      "path": "d:\\Research\\DermoMamba\\experiments\\dual_metric_20250911_015820\\best-combined-epoch=07-val_combined=0.9203.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "best_score": 0.9244397282600403,
+        "monitor_metric": "val_combined",
+        "epochs_trained": 8,
+        "training_steps": 22,
+        "last_lr_epoch": 7
+      },
+      "inference_times": {
+        "1x224x224": 0.01775521755218506,
+        "1x256x256": 0.016166439056396486,
+        "1x384x384": 0.03303001880645752,
+        "4x256x256": 0.03910882949829102
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 56.32147266350641,
+        "1x256x256": 61.85654098045392,
+        "1x384x384": 30.27548987663596,
+        "4x256x256": 102.2786938733309
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Experiment: edge_enhanced_boundary_boundar... (best_model.ckpt)",
+      "category": "edge_enhanced_boundary_boundary_optimized_20250909_174212",
+      "type": "experiment",
+      "path": "d:\\Research\\DermoMamba\\experiments\\edge_enhanced_boundary_boundary_optimized_20250909_174212\\checkpoints\\best_model.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "epochs_trained": 15
+      },
+      "inference_times": {
+        "1x224x224": 0.01667701721191406,
+        "1x256x256": 0.016563591957092286,
+        "1x384x384": 0.03298604488372803,
+        "4x256x256": 0.039396419525146484
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 59.96276116364502,
+        "1x256x256": 60.37337810485091,
+        "1x384x384": 30.315850339890208,
+        "4x256x256": 101.53206936602007
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Experiment: finetune_20250911_014557... (best-epoch=07-val_dice=0.9450.ckpt)",
+      "category": "finetune_20250911_014557",
+      "type": "experiment",
+      "path": "d:\\Research\\DermoMamba\\experiments\\finetune_20250911_014557\\best-epoch=07-val_dice=0.9450.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "best_score": 0.9449911117553711,
+        "monitor_metric": "val_dice",
+        "epochs_trained": 8,
+        "training_steps": 39,
+        "last_lr_epoch": 7
+      },
+      "inference_times": {
+        "1x224x224": 0.018365726470947266,
+        "1x256x256": 0.016107378005981447,
+        "1x384x384": 0.03294883728027344,
+        "4x256x256": 0.03889283180236816
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 54.44924825499822,
+        "1x256x256": 62.08335084882541,
+        "1x384x384": 30.35008463253733,
+        "4x256x256": 102.84671531056894
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Experiment: guide_fusion_boundary_enhanced... (best_model.ckpt)",
+      "category": "guide_fusion_boundary_enhanced_20250909_014911",
+      "type": "experiment",
+      "path": "d:\\Research\\DermoMamba\\experiments\\guide_fusion_boundary_enhanced_20250909_014911\\checkpoints\\best_model.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "epochs_trained": 67
+      },
+      "inference_times": {
+        "1x224x224": 0.02260443687438965,
+        "1x256x256": 0.017005839347839356,
+        "1x384x384": 0.03299623966217041,
+        "4x256x256": 0.039230995178222657
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 44.2391025070383,
+        "1x256x256": 58.80333099389493,
+        "1x384x384": 30.306483715672663,
+        "4x256x256": 101.9601970795893
+      },
+      "model_loaded": true
+    },
+    {
+      "name": "Experiment: optimized_complete_dermomamba_... (best_model.ckpt)",
+      "category": "optimized_complete_dermomamba_20250910_235625",
+      "type": "experiment",
+      "path": "d:\\Research\\DermoMamba\\experiments\\optimized_complete_dermomamba_20250910_235625\\checkpoints\\best_model.ckpt",
+      "total_params": 4915364,
+      "trainable_params": 4915364,
+      "model_size_mb": 18.750625610351562,
+      "flops_count": 4086586336.0,
+      "flops_readable": "4",
+      "checkpoint_metrics": {
+        "best_score": 0.42672520875930786,
+        "monitor_metric": "val_dice",
+        "epochs_trained": 25,
+        "training_steps": 1800,
+        "last_lr_epoch": 25
+      },
+      "inference_times": {
+        "1x224x224": 0.02057143211364746,
+        "1x256x256": 0.01727910041809082,
+        "1x384x384": 0.03302248001098633,
+        "4x256x256": 0.03976060390472412
+      },
+      "memory_usage": {
+        "1x224x224": 0.765625,
+        "1x256x256": 1.0,
+        "1x384x384": 2.25,
+        "4x256x256": 4.0
+      },
+      "throughput": {
+        "1x224x224": 48.611102740707196,
+        "1x256x256": 57.87338320882857,
+        "1x384x384": 30.28240155395075,
+        "4x256x256": 100.60209371027042
+      },
+      "model_loaded": true
+    }
+  ]
+}

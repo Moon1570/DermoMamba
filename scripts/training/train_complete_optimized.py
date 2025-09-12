@@ -10,6 +10,7 @@ from torch.utils.data import DataLoader
 import pytorch_lightning as pl
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning.loggers import TensorBoardLogger
+from datetime import datetime
 
 import sys
 sys.path.append('.')
@@ -168,9 +169,19 @@ def main():
     total_params = sum(p.numel() for p in model.parameters())
     print(f"Model parameters: {total_params:,}")
     
+    # Create experiment directory with timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    exp_name = f"optimized_complete_dermomamba_{timestamp}"
+    exp_dir = f"experiments/{exp_name}"
+    os.makedirs(exp_dir, exist_ok=True)
+    os.makedirs(f"{exp_dir}/checkpoints", exist_ok=True)
+    os.makedirs(f"{exp_dir}/logs", exist_ok=True)
+    
+    print(f"\n📁 Experiment directory: {exp_dir}")
+    
     # Callbacks
     checkpoint_callback = ModelCheckpoint(
-        dirpath='checkpoints/optimized_complete',
+        dirpath=f'{exp_dir}/checkpoints',
         filename='best_model',
         monitor='val_dice',
         mode='max',
@@ -186,7 +197,7 @@ def main():
     )
     
     # Logger
-    logger = TensorBoardLogger('tb_logs', name='optimized_complete_dermomamba')
+    logger = TensorBoardLogger(f'{exp_dir}/logs', name='optimized_complete_dermomamba')
     
     # Trainer
     trainer = pl.Trainer(
@@ -221,16 +232,37 @@ def main():
     # Load best model and test
     best_model_path = checkpoint_callback.best_model_path
     print(f"\n🏆 Best model saved at: {best_model_path}")
+    print(f"📁 Experiment directory: {exp_dir}")
     
     if best_model_path:
         # Load best model for final evaluation
         best_model = OptimizedDermoMambaLightning.load_from_checkpoint(best_model_path)
         trainer.validate(best_model, val_loader)
         
+        # Save final results to experiment directory
+        results_file = f"{exp_dir}/training_results.txt"
+        with open(results_file, 'w') as f:
+            f.write(f"Optimized Complete DermoMamba Training Results\n")
+            f.write(f"=============================================\n\n")
+            f.write(f"Experiment: {exp_name}\n")
+            f.write(f"Timestamp: {timestamp}\n")
+            f.write(f"Best Model Path: {best_model_path}\n")
+            f.write(f"Best Validation Dice: {checkpoint_callback.best_model_score:.4f}\n")
+            f.write(f"Model Parameters: {total_params:,}\n")
+            f.write(f"Training Configuration:\n")
+            f.write(f"  - Batch size: 4 (effective: 8 with grad accumulation)\n")
+            f.write(f"  - Learning rate: 1e-4\n")
+            f.write(f"  - Mixed precision: {'Yes' if torch.cuda.is_available() else 'No'}\n")
+            f.write(f"  - Max epochs: 100\n")
+            f.write(f"  - Early stopping patience: 15\n")
+        
+        print(f"📊 Results saved to: {results_file}")
+        
         print(f"\n✅ Training completed successfully!")
         print(f"✅ Model architecture: All paper properties preserved")
         print(f"✅ Performance: Significantly optimized")
         print(f"✅ Best validation dice: {checkpoint_callback.best_model_score:.4f}")
+        print(f"✅ Saved to experiments directory: {exp_dir}")
 
 if __name__ == "__main__":
     main()

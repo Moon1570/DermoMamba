@@ -1,0 +1,66 @@
+{
+  "Optimized Complete Baseline": {
+    "path": "d:/Research/DermoMamba/checkpoints/optimized_complete_improved/best_model-v1.ckpt",
+    "analysis": {
+      "dice_stats": {
+        "mean": 0.9165114724636078,
+        "std": 0.05913618855995509,
+        "min": 0.5569272637367249,
+        "max": 0.9667903184890747,
+        "median": 0.9287291467189789
+      },
+      "iou_stats": {
+        "mean": 0.8732774430292498,
+        "std": 0.08697537355885261,
+        "min": 0.3873936543488717,
+        "max": 0.9598133157278154,
+        "median": 0.8908751562391765
+      },
+      "performance_breakdown": {
+        "dice": {
+          "excellent (>90%)": "37/50 (74.0%)",
+          "good (80-90%)": "12/50 (24.0%)",
+          "fair (70-80%)": "0/50 (0.0%)"
+        },
+        "iou": {
+          "excellent (>85%)": "36/50 (72.0%)",
+          "good (70-85%)": "13/50 (26.0%)",
+          "fair (60-70%)": "0/50 (0.0%)"
+        }
+      },
+      "correlation": 0.9873101722230254
+    }
+  },
+  "Recent Fine-tuned (94.50% Dice)": {
+    "path": "d:/Research/DermoMamba/experiments/finetune_20250911_014557/best-epoch=07-val_dice=0.9450.ckpt",
+    "analysis": {
+      "dice_stats": {
+        "mean": 0.9253399896621705,
+        "std": 0.040291956289955556,
+        "min": 0.7215898633003235,
+        "max": 0.9666104316711426,
+        "median": 0.9306254684925079
+      },
+      "iou_stats": {
+        "mean": 0.8879696380440724,
+        "std": 0.06646892294459004,
+        "min": 0.5911292766216928,
+        "max": 0.9637958532810859,
+        "median": 0.8983471192161996
+      },
+      "performance_breakdown": {
+        "dice": {
+          "excellent (>90%)": "45/50 (90.0%)",
+          "good (80-90%)": "4/50 (8.0%)",
+          "fair (70-80%)": "1/50 (2.0%)"
+        },
+        "iou": {
+          "excellent (>85%)": "40/50 (80.0%)",
+          "good (70-85%)": "9/50 (18.0%)",
+          "fair (60-70%)": "0/50 (0.0%)"
+        }
+      },
+      "correlation": 0.9796374914497172
+    }
+  }
+}

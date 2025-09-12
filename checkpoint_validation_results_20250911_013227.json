@@ -1,0 +1,82 @@
+[
+  {
+    "checkpoint_path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete\\best_model-v1.ckpt",
+    "model_type": "optimized_complete",
+    "input_channels": 3,
+    "dice_score": {
+      "mean": 0.819890633225441,
+      "std": 0.1267928648122441,
+      "percentage": 81.9890633225441
+    },
+    "iou_score": {
+      "mean": 0.747210815474132,
+      "std": 0.1652269942874606,
+      "percentage": 74.7210815474132
+    },
+    "num_samples": 50
+  },
+  {
+    "checkpoint_path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete\\best_model-v2.ckpt",
+    "model_type": "optimized_complete",
+    "input_channels": 3,
+    "dice_score": {
+      "mean": 0.6724532777071,
+      "std": 0.081625388039824,
+      "percentage": 67.24532777070999
+    },
+    "iou_score": {
+      "mean": 0.5923071059096529,
+      "std": 0.10027005863245135,
+      "percentage": 59.23071059096529
+    },
+    "num_samples": 50
+  },
+  {
+    "checkpoint_path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete\\best_model.ckpt",
+    "model_type": "optimized_complete",
+    "input_channels": 3,
+    "dice_score": {
+      "mean": 0.874289498925209,
+      "std": 0.08363598384252839,
+      "percentage": 87.4289498925209
+    },
+    "iou_score": {
+      "mean": 0.7914818330844037,
+      "std": 0.1161999559044329,
+      "percentage": 79.14818330844037
+    },
+    "num_samples": 50
+  },
+  {
+    "checkpoint_path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete_improved\\best_model-v1.ckpt",
+    "model_type": "optimized_complete",
+    "input_channels": 3,
+    "dice_score": {
+      "mean": 0.920652323961258,
+      "std": 0.04345875316172464,
+      "percentage": 92.0652323961258
+    },
+    "iou_score": {
+      "mean": 0.8755736962780596,
+      "std": 0.07124270797809855,
+      "percentage": 87.55736962780595
+    },
+    "num_samples": 50
+  },
+  {
+    "checkpoint_path": "d:\\Research\\DermoMamba\\checkpoints\\optimized_complete_improved\\best_model.ckpt",
+    "model_type": "optimized_complete",
+    "input_channels": 3,
+    "dice_score": {
+      "mean": 0.846009396314621,
+      "std": 0.10123643546615729,
+      "percentage": 84.6009396314621
+    },
+    "iou_score": {
+      "mean": 0.7893002625453238,
+      "std": 0.13567605009067343,
+      "percentage": 78.93002625453238
+    },
+    "num_samples": 50
+  }
+]

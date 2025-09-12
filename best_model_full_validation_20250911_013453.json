@@ -1,0 +1,28 @@
+{
+  "checkpoint": "d:/Research/DermoMamba/checkpoints/optimized_complete_improved/best_model-v1.ckpt",
+  "model_type": "optimized_complete_improved",
+  "validation_date": "2025-09-11T01:34:53.490036",
+  "dataset_size": 4,
+  "dice_score": {
+    "mean": 0.9302089512348175,
+    "std": 0.03638356474290493,
+    "percentage": 93.02089512348175,
+    "all_scores": [
+      0.9602969288825989,
+      0.9628443121910095,
+      0.924901008605957,
+      0.8727935552597046
+    ]
+  },
+  "iou_score": {
+    "mean": 0.8879676525549012,
+    "std": 0.06340230667926648,
+    "percentage": 88.79676525549012,
+    "all_scores": [
+      0.9388857939059132,
+      0.9500946970169558,
+      0.871677982603454,
+      0.7912121366932812
+    ]
+  }
+}
